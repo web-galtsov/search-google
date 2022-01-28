@@ -25,6 +25,7 @@ export const Search = () => {
 
   useEffect(() => {
     if (debouncedValue) setSearchTerm(debouncedValue);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedValue]);
 
   return (
