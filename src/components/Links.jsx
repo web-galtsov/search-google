@@ -49,8 +49,8 @@ const links = [
 
 export const Links = () => (
   <div className="grid grid-cols-4 gap-2 content-start mt-5 rounded-full ">
-    {links.map(({ url, icons, text }) => (
-      <NavLink to={url} activeClassName="rounded-full w-40 text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2 ease-linear ease-linear transition-all duration-150 hover:text-white active:bg-blue-600">
+    {links.map(({ url, icons, text }, index) => (
+      <NavLink key={index} to={url} activeClassName="rounded-full w-40 text-blue-700 border-b-2 dark:text-blue-300 border-blue-700 pb-2 ease-linear ease-linear transition-all duration-150 hover:text-white active:bg-blue-600">
         <TextIcons className="gap-2 rounded-full">{icons}{text}</TextIcons>
       </NavLink>
     ))}
